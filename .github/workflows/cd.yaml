@@ -20,7 +20,7 @@ jobs:
             --recursive \
             --region ap-northeast-2 \
             --acl public-read \
-            dist s3://junction.sangmin.in
+            build s3://junction.sangmin.in
 
       - name: invalid cache
         env:
