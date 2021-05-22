@@ -23,7 +23,7 @@ jobs:
             dist s3://junction.sangmin.in
 
       - name: invalid cache
-          env:
+        env:
           AWS_ACCESS_KEY_ID: '${{ secrets.AWS_ACCESS_KEY }}'
           AWS_SECRET_ACCESS_KEY: '${{ secrets.AWS_SECRET_KEY }}'
           run: |
