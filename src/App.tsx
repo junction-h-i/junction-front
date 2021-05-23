@@ -1,26 +1,47 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Redirect, Route, Switch, useLocation } from 'react-router-dom';
 import './App.css';
+import { useStores } from './stores/RootStore';
+import GameScreen from './screens/GameScreen/GameScreen';
+import LoginScreen from './screens/LoginScreen/LoginScreen';
+import SignupScreen from './screens/SignupScreen/SignupScreen';
+import JoinTeamScreen from './screens/JoinTeamScreen/JoinTeamScreen';
+import CreateCardScreen from './screens/CreateCardScreen/CreateCardScreen';
+import CreateTeamScreen from './screens/CreateTeamScreen/CreateTeamScreen';
+import { observer } from 'mobx-react-lite';
 
-function App() {
+const App = () => {
+  const { userStore } = useStores();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/login">
+          <LoginScreen />
+        </Route>
+        <Route path="/signup">
+          <SignupScreen />
+        </Route>
+        {userStore.accessToken && userStore.username ? (
+          <>
+            <Route path="/join">
+              <JoinTeamScreen />
+            </Route>
+            <Route path="/create/card">
+              <CreateCardScreen />
+            </Route>
+            <Route path="/create/team">
+              <CreateTeamScreen />
+            </Route>
+            <Route path="/game">
+              <GameScreen />
+            </Route>
+          </>
+        ) : (
+          <Redirect to={{ pathname: "/login" }} />
+        )}
+      </Switch>
+    </Router>
   );
 }
 
-export default App;
+export default observer(App);
