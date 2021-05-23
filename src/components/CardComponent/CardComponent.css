@@ -1,0 +1,91 @@
+.Card {
+  color: white;
+  width: 214px;
+  height: 330px;
+  border-radius: 16px;
+  text-align: left;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 22px;
+  line-height: 1;
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 20px;
+  height: 26px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.card-header img {
+  width: 20px;
+  height: 20px;
+  margin: 3px;
+}
+.card-header span {
+  align-self: center;
+}
+
+.card-body {
+  font-family: 'Montserrat';
+  font-weight: bold;
+}
+
+textarea {
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 22px;
+  background: transparent;
+  border: none;
+  resize: none;
+  width: 100%;
+  outline: none;
+  color: white;
+}
+textarea::placeholder {
+  color: rgb(255, 255, 255, 0.35);
+}
+
+.time-picker input {
+  width: 100px;
+  height: 76px;
+  padding: 0;
+  font-size: 76px;
+  line-height: 1;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white;
+}
+.time-picker input::placeholder {
+  font-size: 76px;
+  line-height: 1;
+  color: rgb(255, 255, 255, 0.3);
+}
+.time-picker .time-text {
+  font-size: 50px;
+  line-height: 76px;
+}
+
+.create {
+  width: 64px;
+  height: 64px;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  align-self: center;
+  outline: none;
+}
+.create.create-center {
+  width: 120px;
+  height: 120px;
+  background-color: transparent;
+  margin: auto 0;
+}

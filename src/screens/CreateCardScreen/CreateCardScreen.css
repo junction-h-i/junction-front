@@ -1,0 +1,24 @@
+.Create-Card {
+  margin: 0 100px;
+}
+
+.Create-Card .Card {
+  margin: 0 auto;
+}
+
+.Create-Card .add-card {
+  position: absolute;
+}
+.Create-Card .add-card .Card {
+  margin: 0;
+}
+.Create-Card .card-list {
+  margin-left: calc(50vw - 227px);
+  display: inline-flex;
+  flex-direction: row-reverse;
+}
+.Create-Card .card-list .Card {
+  margin: 0;
+  margin-right: 22px;
+  display: inline-flex;
+}
