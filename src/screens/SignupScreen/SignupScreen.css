@@ -1,0 +1,14 @@
+.Signup {
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Signup .Input-Card {
+  border: 3px solid #000000;
+}
+.Signup .Input-Card, .Signup .Input-Card input {
+  color: #000000;
+}
