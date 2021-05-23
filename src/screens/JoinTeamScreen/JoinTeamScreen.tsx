@@ -6,7 +6,6 @@ import Logo from "../../components/LogoComponent/LogoComponent";
 import { useLocation, useParams } from "react-router";
 
 const JoinTeamScreen = () => {
-  const { name } = useParams<{name: string}>();
   const query = new URLSearchParams(useLocation().search);
 
   return (

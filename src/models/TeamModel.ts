@@ -15,6 +15,7 @@ export class TeamModel {
       setPassword: action,
       setUser: action,
       setGoalMinute: action,
+      setGameDate: action,
       cardCount: computed,
       completedCardCount: computed,
       leftMinute: computed,
@@ -38,6 +39,10 @@ export class TeamModel {
 
   setGoalMinute(time: number) {
     this.goalMinute = time;
+  }
+
+  setGameDate() {
+    this.gameDate = Date.now();
   }
 
   get cardCount(): number {

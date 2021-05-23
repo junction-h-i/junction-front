@@ -44,35 +44,6 @@ const NavBar: React.FC<{}> = () => {
           </div>
         </div>
       </div>
-        {/* <p className="unotitle">UNO</p>
-        <p className="grouptitle">Super man</p>
-​
-        <div className="rightbox">
-            <div className="right1">
-                <p className="gray">Team Timer</p>
-                <p className="black">3h left</p>
-            </div>
-            <div className="right2">
-                <p className="gray">Member</p>
-                <p className="black">7 of 9</p>
-​
-            </div>
-            <div className="right3">
-                <p className="gray">Team Completion</p>
-                <p className="black">2 of 4</p>
-​
-            </div>
-            <div className="right4">
-                <p className="gray">My Completion</p>
-​
-                <div className="circle">
-                </div>
-                <div className="circle">
-                </div>
-                <div className="circle">
-                </div>
-            </div>
-        </div> */}
     </nav>
   );
 };

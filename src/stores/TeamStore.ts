@@ -17,6 +17,7 @@ export class TeamStore {
       setTeamName: action,
       setTeamPassword: action,
       setGoalMinute: action,
+      setGameDate: action,
       cardCount: computed,
       completedCardCount: computed,
       leftMinute: computed,
@@ -44,6 +45,10 @@ export class TeamStore {
 
   setGoalMinute(time: number) {
     this.team.setGoalMinute(time);
+  }
+
+  setGameDate() {
+    this.team.setGameDate();
   }
 
   get cardCount(): number {

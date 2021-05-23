@@ -19,6 +19,7 @@ const GameScreen = () => {
   const history = useHistory();
 
   useEffect(() => {
+    teamStore.setGameDate();
     setTimeout(() => setStart(true), 200);
   }, []);
 
