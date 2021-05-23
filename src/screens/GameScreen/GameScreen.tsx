@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './GameScreen.css';
-import Card from '../../components/CardComponent/CardComponent';
 import NavBar from '../../components/NavBarComponent/NavBarComponent';
 import Player from '../../components/PlayerComponent/PlayerComponent';
-import { CardModel, CARD_COLOR } from '../../models/CardModel';
 import { useStores } from '../../stores/RootStore';
 import { UserModel } from '../../models/UserModel';
 import Mine from '../../components/MineComponent/MineComponent';
