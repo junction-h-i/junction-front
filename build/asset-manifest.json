@@ -1,23 +1,19 @@
 {
-  "files": {
-    "main.css": "/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/static/js/main.cf5b1392.chunk.js",
-    "main.js.map": "/static/js/main.cf5b1392.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.73c54c52.js",
-    "runtime-main.js.map": "/static/js/runtime-main.73c54c52.js.map",
-    "static/js/2.0c8ef784.chunk.js": "/static/js/2.0c8ef784.chunk.js",
-    "static/js/2.0c8ef784.chunk.js.map": "/static/js/2.0c8ef784.chunk.js.map",
-    "static/js/3.42d94882.chunk.js": "/static/js/3.42d94882.chunk.js",
-    "static/js/3.42d94882.chunk.js.map": "/static/js/3.42d94882.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.8c8b27cf.chunk.css.map": "/static/css/main.8c8b27cf.chunk.css.map",
-    "static/js/2.0c8ef784.chunk.js.LICENSE.txt": "/static/js/2.0c8ef784.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/static/media/logo.6ce24c58.svg"
-  },
-  "entrypoints": [
-    "static/js/runtime-main.73c54c52.js",
-    "static/js/2.0c8ef784.chunk.js",
-    "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.cf5b1392.chunk.js"
-  ]
+  "main.css": "/static/css/main.4c2dbdc8.chunk.css",
+  "main.js": "/static/js/main.583aed16.chunk.js",
+  "main.js.map": "/static/js/main.583aed16.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.e9c9d2ea.js",
+  "runtime~main.js.map": "/static/js/runtime~main.e9c9d2ea.js.map",
+  "static/js/2.65b527a4.chunk.js": "/static/js/2.65b527a4.chunk.js",
+  "static/js/2.65b527a4.chunk.js.map": "/static/js/2.65b527a4.chunk.js.map",
+  "static/js/3.3026d0f1.chunk.js": "/static/js/3.3026d0f1.chunk.js",
+  "static/js/3.3026d0f1.chunk.js.map": "/static/js/3.3026d0f1.chunk.js.map",
+  "index.html": "/index.html",
+  "precache-manifest.c302d014fa25f6cf8a2ad10022d32284.js": "/precache-manifest.c302d014fa25f6cf8a2ad10022d32284.js",
+  "service-worker.js": "/service-worker.js",
+  "static/css/main.4c2dbdc8.chunk.css.map": "/static/css/main.4c2dbdc8.chunk.css.map",
+  "static/media/App.css": "/static/media/Montserrat-SemiBold.c641dbee.ttf",
+  "static/media/CardTableComponent.css": "/static/media/card_table.9520c233.png",
+  "static/media/GameScreen.css": "/static/media/completed.c2e4239d.png",
+  "static/media/icon_time.svg": "/static/media/icon_time.4e1f4f45.svg"
 }

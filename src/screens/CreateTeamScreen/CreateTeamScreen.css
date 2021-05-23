@@ -1,0 +1,25 @@
+.Create-Team {
+  margin: 0 100px;
+}
+
+.Create-Team .Card {
+  margin: 0 auto;
+}
+
+.Create-Team .add-team {
+  position: absolute;
+  display: inline-flex;
+}
+.Create-Team .add-team .Input-Card {
+  margin-right: 22px;
+}
+.Create-Team .card-list {
+  margin-left: calc(100vw - 454px);
+  display: inline-flex;
+  flex-direction: row-reverse;
+}
+.Create-Team .card-list .Card {
+  margin: 0;
+  margin-right: -200px;
+  display: inline-flex;
+}

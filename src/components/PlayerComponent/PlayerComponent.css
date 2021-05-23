@@ -1,0 +1,32 @@
+.Player {
+  width: 254px;
+  height: 568px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Player .player-name {
+  font-family: 'Lexend';
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 45px;
+}
+
+.Player .card-list {
+  height: 410px;
+}
+
+.Player .Card {
+  position: absolute;
+}
+.Player .Card:last-child {
+  transform: rotate(0deg) !important;
+}
+
+.Player .ready {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}

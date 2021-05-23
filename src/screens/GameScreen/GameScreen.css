@@ -1,0 +1,65 @@
+.Game .player-list {
+  margin: 50px 100px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Game .game-board {
+  margin: 12px 100px 0;
+}
+
+.Game .game-board .radio-group {
+  height: 48px;
+  z-index: 1000;
+}
+.Game .game-board .radio-group button {
+  height: 48px;
+  background: transparent;
+  border: 1px solid #000;
+  border-radius: 30px;
+  font-family: 'Lexend';
+  font-size: 21px;
+  padding: 0 33.5px;
+  outline: none;
+  margin-right: 16px;
+}
+
+.Game .overlay {
+  position: relative;
+}
+.Game .overlay:before {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.6;
+  background-image: url('../../assets/imgs/completed.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.Game .background-card {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Game .logo-big {
+  font-family: 'Montserrat';
+  font-size: 100px;
+  font-weight: bold;
+  line-height: 120px;
+  margin-bottom: 53px;
+}
+.Game .message {
+  font-family: 'Lexend';
+  font-size: 70px;
+  font-weight: normal;
+  line-height: 87.5px;
+}

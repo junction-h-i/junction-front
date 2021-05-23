@@ -1,0 +1,41 @@
+.Card-Table {
+  position: absolute;
+  top: 160px;
+  left: 100px;
+  width: calc(100vw - 100px);
+  height: calc(100vh - 160px);
+  background-image: url('../../assets/imgs/card_table.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Card-Table > div {
+  position: absolute;
+  left: calc(50vw - 177px);
+  top: calc(50vh - 265px);
+  transition: margin-top 500ms linear, margin-left 500ms linear;
+}
+
+.Card-Table .progress {
+  top: 60px;
+  left: 0;
+  width: 328px;
+  height: 28px;
+  margin: 40px 0;
+  border-radius: 40px;
+  background-color: #F5F5F5;
+  box-shadow: 0px 6.52736px 13.0547px rgba(102, 96, 96, 0.25);
+}
+.Card-Table .progress-active {
+  height: 28px;
+  margin: 0;
+  border-radius: 40px;
+  background-color: #373444;
+}
+.Card-Table .progress-percent {
+  height: 28px;
+  line-height: 28px;
+  text-align: right;
+  margin-right: 14px;
+  color: white;
+}

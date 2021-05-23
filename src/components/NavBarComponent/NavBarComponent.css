@@ -1,0 +1,136 @@
+nav.Navbar {
+  height: 160px;
+  background-color: #F3F3F3;
+  padding: 0 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+nav .nav-title {
+  align-self: center;
+  text-align: left;
+  font-family: 'Montserrat';
+}
+nav .nav-title .logo {
+  font-size: 16px;
+  font-weight: bold;
+}
+nav .nav-title .teamname {
+  font-size: 32px;
+  font-weight: bolder;
+}
+
+nav .nav-status {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 780px;
+  align-self: center;
+}
+nav .nav-status .label {
+  color: #959595;
+  font-family: 'Lexend';
+  font-size: 16px;
+  font-weight: normal;
+  text-align: left;
+}
+nav .nav-status .status {
+  width: 150px;
+  height: 60px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+nav .nav-status .info {
+  text-align: left;
+  font-family: 'Montserrat';
+  font-size: 28px;
+  font-weight: 600;
+}
+nav .nav-status .member .info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+}
+nav .nav-status .member .info .member-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  line-height: 40px;
+  color: white;
+}
+
+/* 
+p {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lexend';
+}
+​
+.unotitle {
+  font-family: 'Montserrat';
+  font-weight: bold;
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  font-size: 16px;
+}
+​
+.grouptitle {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 700;
+  position: absolute;
+  top: 75px;
+  left: 100px;
+  font-size: 32px;
+}
+​
+.rightbox {
+  margin-left: 580px;
+  margin-top: 50px;
+}
+​
+.right1 {
+  float: left;
+  width: 200px;
+}
+​
+.gray {
+  color: #959595;
+  margin-bottom: 10px;
+}
+​
+.black {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 600;
+  position: absolute;
+  font-size: 28px;
+}
+​
+.right2 {
+  float: left;
+  width: 200px;
+}
+​
+.circle {
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+  background-color: blue;
+  margin-right: 6px;
+  float: left;
+}
+​
+.right3 {
+  float: left;
+  width: 240px;
+}
+​
+.right4 {
+  float: left;
+  width: 200px;
+} */
