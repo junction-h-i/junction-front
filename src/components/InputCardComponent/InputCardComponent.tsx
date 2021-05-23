@@ -40,7 +40,7 @@ const InputCard: React.FC<{
 
   const join = () => {
     if (name && password) {
-      teamStore.join(name, password);
+      teamStore.join(name, password).then(() => history.replace('/game'));
     } else {
       alert('name or password invalid!');
     }
