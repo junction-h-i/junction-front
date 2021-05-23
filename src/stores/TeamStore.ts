@@ -15,6 +15,7 @@ export class TeamStore {
     makeAutoObservable(this, {
       teamname: computed,
       setTeamName: action,
+      setTeamPassword: action,
       setGoalMinute: action,
       cardCount: computed,
       completedCardCount: computed,
@@ -31,6 +32,10 @@ export class TeamStore {
 
   setTeamName(name: string) {
     this.team.setName(name);
+  }
+
+  setTeamPassword(password: string) {
+    this.team.setPassword(password);
   }
 
   setUser(user: UserModel) {
@@ -57,11 +62,13 @@ export class TeamStore {
     return this.team.completedCardList;
   }
 
-  async createTeam(teamname: string, password: string) {
-    const { data } = await axios.post('/team', { team_name: teamname, password: password, goal_minute: this.team.goalMinute });
+  async createTeam() {
+    console.log(this.team.name, this.team.password, this.team.goalMinute);
+    const { data } = await axios.post('/team', { team_name: this.team.name, password: this.team.password, goal_minute: this.team.goalMinute });
     console.log(data);
     runInAction(() => {
-      this.setTeamName(teamname);
+      this.setTeamName(this.team.name);
+      this.setTeamPassword('');
       this.setUser(this.rootStore.userStore.user);
     });
   }
@@ -77,6 +84,7 @@ export class TeamStore {
   }
 
   async getTeamCardList() {
+    console.log(this.teamname);
     const { data } = await axios.get('/cards', { params: { team_name: this.teamname } });
     console.log(data);
     runInAction(() => {

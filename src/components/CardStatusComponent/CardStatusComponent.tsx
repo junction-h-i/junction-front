@@ -10,7 +10,9 @@ const CardStatus: React.FC<{
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    setProgress((card.goalFocusMinute - card.leftMinute) / card.goalFocusMinute);
+    if (card.goalFocusMinute > 0) {
+      setProgress((card.goalFocusMinute - card.leftMinute) / card.goalFocusMinute);
+    }
   }, [card.leftMinute]);
 
   return (

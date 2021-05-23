@@ -1,5 +1,5 @@
 import { observer } from 'mobx-react-lite';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { UserModel } from '../../models/UserModel';
 import { useStores } from '../../stores/RootStore';
 import { timeToText } from '../../utils/TimeUtilities';
@@ -8,6 +8,14 @@ import './NavBarComponent.css';
 const NavBar: React.FC<{}> = () => {
   const { userStore, teamStore } = useStores();
   const colors: string[] = ['#C7B9FF', '#699BF7', '#FF8577'];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      teamStore.getTeamCardList();
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <nav className="Navbar">
       <div className="nav-title">

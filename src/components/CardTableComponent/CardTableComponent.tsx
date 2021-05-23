@@ -20,7 +20,9 @@ const CardTable: React.FC<{}> = () => {
   }, []);
 
   useEffect(() => {
-    setProgress(teamStore.completedCardCount / teamStore.cardCount);
+    if (teamStore.cardCount > 0) {
+      setProgress(teamStore.completedCardCount / teamStore.cardCount);
+    }
   }, [teamStore.completedCardCount]);
 
   return (

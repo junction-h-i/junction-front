@@ -38,7 +38,7 @@ const Mine: React.FC<{}> = () => {
   return (
     <div className="Mine">
       <div className="description" style={start ? {marginLeft: 310, top: 100} : {}}>
-        {userStore.user.cardList[currentCardIndex].progressStatus !== 'DONE' && description}
+        {userStore.user.cardList.length > currentCardIndex && userStore.user.cardList[currentCardIndex] && userStore.user.cardList[currentCardIndex].progressStatus !== 'DONE' && description}
       </div>
       <div className="card-list">
         {userStore.user.cardList.map((card: CardModel, index: number) => (

@@ -11,12 +11,6 @@ const SignupScreen = () => {
   const { userStore } = useStores();
   const history = useHistory();
 
-  useEffect(() => {
-    if (userStore.username) {
-      history.goBack();
-    }
-  }, [userStore.username]);
-
   return (
     <div className="Signup">
       <Logo />

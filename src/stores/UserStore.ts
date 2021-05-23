@@ -13,7 +13,10 @@ export default class UserStore {
     this.user = new UserModel();
 
     const accessToken = localStorage.getItem('accessToken');
-    if (accessToken) this.setAccessToken(accessToken);
+    if (accessToken) {
+      this.setAccessToken(accessToken);
+      setTimeout(() => this.getCardList(this.userId), 500);
+    }
 
     const username = localStorage.getItem('username');
     if (username) this.setUserName(username);

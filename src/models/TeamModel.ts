@@ -7,10 +7,12 @@ export class TeamModel {
   userList: UserModel[] = [];
   goalMinute: number = 0;
   gameDate: number = 0;
+  password: string = '';
   constructor() {
     this.userList = [];
     makeAutoObservable(this, {
       setName: action,
+      setPassword: action,
       setUser: action,
       setGoalMinute: action,
       cardCount: computed,
@@ -22,6 +24,10 @@ export class TeamModel {
 
   setName(name: string) {
     this.name = name;
+  }
+
+  setPassword(password: string) {
+    this.password = password;
   }
 
   setUser(user: UserModel) {

@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Redirect, Route, Switch, useLocation } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
 import './App.css';
 import { useStores } from './stores/RootStore';
 import GameScreen from './screens/GameScreen/GameScreen';
@@ -12,6 +12,14 @@ import { observer } from 'mobx-react-lite';
 
 const App = () => {
   const { userStore } = useStores();
+
+  useEffect(() => {
+    const accessToken = localStorage.getItem('accessToken');
+    if (!userStore.accessToken && accessToken) {
+      userStore.setAccessToken(accessToken);
+    }
+  }, []);
+
   return (
     <Router>
       <Switch>

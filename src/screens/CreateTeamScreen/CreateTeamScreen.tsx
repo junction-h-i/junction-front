@@ -6,9 +6,17 @@ import Header from "../../components/HeaderComponent/HeaderComponent";
 import { useStores } from "../../stores/RootStore";
 import { CardModel, CARD_COLOR } from "../../models/CardModel";
 import InputCard from "../../components/InputCardComponent/InputCardComponent";
+import { useHistory } from "react-router";
 
 const CreateTeamScreen = () => {
-  const { userStore, cardStore } = useStores();
+  const { userStore } = useStores();
+  const history = useHistory();
+
+  useEffect(() => {
+    if (userStore.cardCount === 0) {
+      history.replace('/create/card');
+    }
+  }, [userStore.cardCount]);
 
   return (
     <div className="Create-Team">

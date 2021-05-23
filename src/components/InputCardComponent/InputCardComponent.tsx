@@ -32,7 +32,7 @@ const InputCard: React.FC<{
 
   const signup = () => {
     if (name && password) {
-      userStore.signup(name, password);
+      userStore.signup(name, password).then(() => history.replace('/login'));
     } else {
       alert('name or password invalid!');
     }
@@ -51,6 +51,13 @@ const InputCard: React.FC<{
       setName(userStore.username);
     }
   }, [userStore.username]);
+
+  useEffect(() => {
+    if (type === 'create') {
+      teamStore.setTeamName(name || '');
+      teamStore.setTeamPassword(password || '');
+    }
+  }, [name, password]);
 
   useEffect(() => {
     if (type === 'time') {

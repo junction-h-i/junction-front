@@ -9,16 +9,24 @@ import { UserModel } from '../../models/UserModel';
 import Mine from '../../components/MineComponent/MineComponent';
 import CardTable from '../../components/CardTableComponent/CardTableComponent';
 import { observer } from 'mobx-react-lite';
+import { useHistory } from 'react-router';
 
 const GameScreen = () => {
   const { userStore, teamStore } = useStores();
   const [start, setStart] = useState(false);
   const [isMine, setIsMine] = useState(true);
   const [complete, setComplete] = useState(false);
+  const history = useHistory();
 
   useEffect(() => {
     setTimeout(() => setStart(true), 200);
   }, []);
+
+  useEffect(() => {
+    if (!teamStore.teamname) {
+      history.replace('/create/team');
+    }
+  }, [teamStore.teamname]);
 
   useEffect(() => {
     if (userStore.completedCardCount === userStore.cardCount) {
@@ -27,7 +35,7 @@ const GameScreen = () => {
   }, [userStore.completedCardCount]);
 
   useEffect(() => {
-    if (teamStore.cardCount === teamStore.completedCardCount) {
+    if (teamStore.completedCardCount > 0 && teamStore.cardCount === teamStore.completedCardCount) {
       setComplete(true);
     }
   }, [teamStore.completedCardCount]);

@@ -34,6 +34,7 @@ const CreateCardScreen = () => {
       setDescription1('Create tasks and');
       setDescription2(`clear them together ${userStore.username}!`);
       cardStore.resetCard();
+      setAdditionalCard(true);
       setHeaderButton('Create Team');
     }
   }, [userStore.cardCount]);
